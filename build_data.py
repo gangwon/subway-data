@@ -107,8 +107,13 @@ def generate_dist_list(station_dict, intervals):
 
     return result
 
-lines = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'I1', 'K1', 'K2', 'K3', 'AREX', 'D', 'U1']
+def get_lines(line_filename):
+    f = open(line_filename, 'r')
+    lines = [l.strip() for l in f.readlines()]
+    f.close()
+    return lines
 
+lines = get_lines('raw/list.txt')
 stations = []
 dists = []
 for line in lines:
