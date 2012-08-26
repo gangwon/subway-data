@@ -107,7 +107,7 @@ def generate_dist_list(station_dict, intervals):
 
     return result
 
-lines = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'I1', 'K1', 'K2', 'K3', 'AREX', 'D']
+lines = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'I1', 'K1', 'K2', 'K3', 'AREX', 'D', 'U1']
 
 stations = []
 dists = []
