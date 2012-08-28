@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import sys
 import re
 import os.path
 
@@ -113,12 +114,17 @@ def get_lines(line_filename):
     f.close()
     return lines
 
-lines = get_lines('raw/list.txt')
+if len(sys.argv) != 2:
+    print "Usage: " + sys.argv[0] + " metro_name"
+    exit(1)
+
+metro_name = sys.argv[1]
+
+lines = get_lines(metro_name + '/list.txt')
 stations = []
 dists = []
 for line in lines:
-    blocks = read_raw('raw/' + line)
-    (station_dict, nums, intervals) = merge_blocks(read_raw('raw/' + line))
+    (station_dict, nums, intervals) = merge_blocks(read_raw(metro_name + '/' + line))
     stations += generate_station_list(station_dict, nums, line)
     dists += generate_dist_list(station_dict, intervals)
 
