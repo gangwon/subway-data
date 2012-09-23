@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Subway-data : " />
+    <meta name="description" content="subway-data : " />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Subway-data</title>
+    <title>subway-data</title>
   </head>
 
   <body>
@@ -18,29 +18,68 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/gangwon/subway-data">View on GitHub</a>
 
-          <h1 id="project_title">Subway-data</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/gangwon/subway-data/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/gangwon/subway-data/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+          <h1 id="project_title">subway-data</h1>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>subway-data</h1>
+        <h1>소개</h1>
+        <p>서울대학교 4190.204 자료구조 (문병로 교수님) 수업 과제 6을 위한 수도권/부산권 전철 노선 데이터입니다. 2007년 1학기 수업 때 받은 데이터를 기초로 하여 현재까지 계속 데이터를 유지, 보수해 나가고 있습니다.</p>
 
-<p>Under construction</p>
+        <h1>파일</h1>
+        <ul>
+          <li>수도권: <a href="https://raw.github.com/gangwon/subway-data/master/output/seoul.txt">EUC-KR</a> / <a href="https://raw.github.com/gangwon/subway-data/master/output/seoul.utf8.txt">UTF-8</a></li>
+          <li>부산권: <a href="https://raw.github.com/gangwon/subway-data/master/output/busan.txt">EUC-KR</a> / <a href="https://raw.github.com/gangwon/subway-data/master/output/busan.utf8.txt">UTF-8</a></li>
+        </ul>
+        <p>EUC-KR과 UTF-8이 무슨 말인지 이해가 안 되시는 분들은,</p>
+        <ul>
+          <li>Windows에서 작업할 경우: EUC-KR을 받으세요.</li>
+          <li>martini.snu.ac.kr에서 작업할 경우: UTF-8을 받으세요.</li>
+        </ul>
+
+        <h1>제공되는 노선</h1>
+        <h2>수도권</h2>
+        <ul>
+          <li>1: 지하철 1호선(서메) + 경원선 + 경인선 + 경부선 + 장항선 + 경부고속선 + 병점기지선(이상 철공)</li>
+          <li>2: 지하철 2호선 + 성수지선 + 신도림지선(이상 서메)</li>
+          <li>3: 지하철 3호선(서메) + 일산선(철공)</li>
+          <li>4: 지하철 4호선(서메) + 과천선 + 안산선(이상 철공)</li>
+          <li>5: 지하철 5호선(도철공)</li>
+          <li>6: 지하철 6호선(도철공)</li>
+          <li>7: 지하철 7호선(도철공)</li>
+          <li>8: 지하철 8호선(도철공)</li>
+          <li>9: 지하철 9호선(메트로9)</li>
+          <li>I1: 인천지하철 1호선(인지공)</li>
+          <li>K1: 경원선 + 중앙선 + 경춘선(이상 철공)</li>
+          <li>K2: 분당선 + 수인선(철공)</li>
+          <li>K3: 경의선(철공)</li>
+          <li>AREX: 인천국제공항철도(철공)</li>
+          <li>D: 신분당선(신분당선)</li>
+          <li>U1: 의정부경전철(의정부경전철)</li>
+        </ul>
+        <h2>부산권</h2>
+        <ul>
+          <li>1: 지하철 1호선</li>
+          <li>2: 지하철 2호선</li>
+          <li>3: 지하철 3호선</li>
+          <li>4: 지하철 4호선</li>
+          <li>BGL: 부산김해경전철</li>
+        </ul>
+
+        <h1>참고</h1>
+        <ul>
+          <li>수도권 211-0(성수), 234-0(신도림), K251(오이도)은 실제로 존재하지 않는 역번호입니다. 2호선 본선과 성수 지선, 2호선 본선과 신도림 지선, 4호선과 수인선 사이가 환승으로 처리되도록 하기 위해 임의로 부여한 것입니다.</li>
+          <li>수도권/부산권 전철 유관 기관 홈페이지와 네이버 등의 포탈 사이트 등은 최단 경로를 구하는 데 초 단위 구간 거리 정보와 역별 평균 환승시간 정보를 추가로 사용하므로, 본 데이터를 사용해 구한 경로 및 시간이 이들 서비스의 계산 결과와 다를 수 있습니다.</li>
+        </ul>
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Subway-data maintained by <a href="https://github.com/gangwon">gangwon</a></p>
+        <p class="copyright">subway-data maintained by <a href="https://github.com/gangwon">gangwon</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
