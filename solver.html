@@ -9,6 +9,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>subway-data</title>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="solver.js"></script>
   </head>
 
   <body>
@@ -27,16 +30,17 @@
       <section id="main_content" class="inner">
         <h1>최단거리 찾기</h1>
         <p>여러분의 프로그램이 출력한 답이 맞는지 확인해 보세요. 답이 다를 경우, 최신 버전의 데이터를 사용하고 있는지 다시 한 번 확인해 보세요.</p>
-        <form>
+        <form target="#">
           <select name="region">
             <option value="seoul" selected>수도권</option>
             <option value="busan">부산권</option>
           </select>
           <input name="from" placeholder="출발역">
           <input name="to" placeholder="도착역">
-          <input type="checkbox" name="transfer" value="1">최소 환승
+          <input type="checkbox" name="transfer">최소 환승
           <input type="submit" value="계산">
         </form>
+        <span id="result"></span>
       </section>
     </div>
 
